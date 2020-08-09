@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Dog Years</title>
+</head>
+<body>
+<script>
+	// variable named myAge is created
+	var myAge = prompt("Enter your Age");
+	// variable named earlyYears is created
+	var earlyYears=2;
+
+	 earlyYears = earlyYears * 10.5;
+	 // since earlyYears are takenout from myAge the remaining years is assigned to laterYears
+	 var laterYears = myAge-2;
+	 // Multiply laterYears with 4 and again assigned to it
+	 laterYears = laterYears*4;
+
+	 console.log(earlyYears);
+
+	 console.log(laterYears);
+
+	 // summation of earlyYears and laterYears is assigned to myAgeInDogYears
+	 var myAgeInDogYears = earlyYears + laterYears ;
+	 // Storing name as a string
+	 var Name = prompt("Enter your name");
+
+	 var myName= Name.toLowerCase();
+
+	 console.log("My name is "+myName+". I am "+myAge+" years old in human years which is "+myAgeInDogYears+" years old in dog years.");
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Rock, Paper or Scissors</title>
+</head>
+<body>
+	<p id="winner"> HI</p>
+	<script>
+		var userInput=prompt("Select one : Rock, Paper or Scissors");
+		userInput = userInput.toLowerCase();
+
+			getUserChoice(userInput);
+		function getUserChoice(userInput){
+			if (userInput=="rock"|| userInput=="paper"||userInput=="scissors"|| userInput=="bomb") 
+				return userInput;
+			else 
+			return	"Select only the given options";
+		}
+		
+		
+		
+		function getComputerChoice(){
+			let random= Math.floor(Math.random() *2);
+
+			if (random==0) {
+				return "rock";
+			}
+			if (random==1) {
+			return	"paper";
+			}
+			if (random==2) {
+			return	"scissors";
+			}
+		}
+            
+            
+		function determineWinner(userChoice,computerChoice){
+			if (userChoice==computerChoice) {
+				return "It's a Tie"; 
+				
+			}
+			else if(userChoice=="rock"){
+				if (computerChoice=="paper") {
+				return	"Oh!! You lost it:(";
+				}
+				if (userChoice=="scissors") {
+				return	"Great!!! You won over a computer :)";
+				}	
+
+			}
+			else if (userChoice=="paper") {
+				if (computerChoice=="rock") {
+				return	"Great!!! You won over a computer :)";
+				}
+				if (computerChoice=="scissors") {
+				return	"Oh!! You lost it:(";
+				}
+			}
+			else if (userChoice=="scissors") {
+				if (computerChoice=="rock") {
+				return	"Oh!! You lost it:(";
+				}
+				if (computerChoice=="paper") {
+				 return    "Great!!! You won over a computer :)";
+				}
+			}
+			else if (userChoice=="bomb") {
+				return  "Great!!! You won over a computer :)";
+			}
+
+		}
+		function playGame(){
+			userChoice=getUserChoice(userInput);
+			computerChoice=getComputerChoice();
+			console.log(userChoice);
+			console.log(computerChoice);
+			document.getElementById("winner").innerHTML=determineWinner(userChoice,computerChoice);
+		}
+		playGame();
+
+	</script>
+</body>
+</html>

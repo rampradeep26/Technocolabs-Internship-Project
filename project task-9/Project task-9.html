@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Race Day</title>
+</head>
+<body>
+	<script>
+		let raceNumber = Math.floor(Math.random() * 1000);
+
+		var registervalue =prompt("Have you registerd before 9:30 AM. yes or no?");
+		registervalue = registervalue.toLowerCase();
+		if (registervalue == "yes") {
+			registervalue = 1;
+		}
+		else
+			registervalue= 0;
+		var runnerage = prompt("what is your age");
+
+		if (runnerage > 18 && registervalue==1) {
+			raceNumber = raceNumber+1000;
+			console.log("For number "+raceNumber+" .The race will start at 9:30 AM.");
+		}
+		else if (runnerage>18 && registervalue==0) {
+			console.log("For number "+ raceNumber+". The race will start from 11:00 AM.");
+		}
+		else if (runnerage<18) {
+			console.log("For number "+ raceNumber+". The race will start from 12:30 PM.");
+		}
+		else
+			console.log("Visit the registration desk for the details.");
+
+
+
+	</script>
+</body>
+</html>

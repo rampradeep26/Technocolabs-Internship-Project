@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Kelvin Weather</title>
+</head>
+<body>
+	<script>
+		var kelvin = prompt("Enter Temperature in Kelvin");
+	//Kelvin to Celsius by subtracting 273 from kelvin.
+	var celsius = kelvin - 273;
+	// Celsius to Fahrenheit using .floor() method.
+	var round= celsius*(9/5) +32;
+
+	var fahrenheit = Math.floor(round);
+
+	// Celsius to Newton using .floor() method.
+	var round1 = celsius*(33/100);
+
+	var newton = Math.floor(round1);
+
+	// Saving the value of fahrenheit using console log()
+
+	console.log("The temperature is " + celsius +" degrees Celsius"); 
+
+	console.log("The temperature is " + fahrenheit + "  degrees Fahrenheit"); 
+
+	console.log("The temperature is "+newton+" degrees Newton" );
+
+	</script>
+</body>
+</html>
